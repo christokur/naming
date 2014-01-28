@@ -1,0 +1,7 @@
+2013-07-27 21:25:13      915  +915    -0 20e0ba5 cesarte@gmail.com 	first commit
+2013-07-27 21:26:06     1834  +919    -0 bc7c349 cesarte@gmail.com 	naming convention
+2013-07-31 02:51:59     1907  +719  -646 f7b2e14 cesarte@gmail.com 	WIP: Naming editor
+2013-07-31 02:51:59     2523  +616    -0 db4b0c7 cesarte@gmail.com 	WIP: Naming editor
+2013-07-31 03:02:19     1907    +0  -616 44538a1 cesarte@gmail.com 	moved to riglab.naming
+2013-08-01 01:47:45     2103  +210   -14 4d36cc8 cesarte@gmail.com 	WIP: save/load naming editor
+2013-08-02 14:00:45     2271  +232   -64 62c2053 cesarte@gmail.com 	naming editor gui properly working
