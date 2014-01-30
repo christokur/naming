@@ -9,7 +9,7 @@ Dependencies
 
 Installation
 ------------
-- Clone the repo and type in a terminal:
+Clone the repo and type in a terminal:
 
     python setup.py install
 

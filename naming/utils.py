@@ -1,3 +1,18 @@
+# This file is part of naming
+# Copyright (C) 2014  Cesar Saez
+
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation version 3.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 from contextlib import contextmanager
 import shutil
 import json
@@ -36,7 +51,7 @@ class Manager(object):
         fp = os.path.join(self.NAMING_DIR, "rules.json")
         if not os.path.exists(fp):
             src = os.path.normpath(os.path.join(os.path.dirname(__file__),
-                                                "..", "data", "rules.json"))
+                                                "data", "rules.json"))
             shutil.copy(src, self.NAMING_DIR)
         self._rules = JSONDict(fp)
         return self._rules
@@ -48,7 +63,7 @@ class Manager(object):
         token_dir = os.path.join(self.NAMING_DIR, "tokens")
         if not os.path.exists(token_dir):
             src = os.path.normpath(os.path.join(os.path.dirname(__file__),
-                                                "..", "data", "tokens"))
+                                                "data", "tokens"))
             shutil.copytree(src, os.path.join(self.NAMING_DIR, "tokens"))
         self._tokens = dict()
         for fp in os.listdir(token_dir):
