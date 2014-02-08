@@ -1,12 +1,10 @@
 {
-    "default": "center",
-    "classname": "DictToken",
+    "default": "C", 
+    "classname": "DictToken", 
     "values": {
-        "upper": "HI",
-        "lower": "LO",
-        "right": "R",
-        "center": "M",
+        "right": "R", 
+        "center": "C", 
         "left": "L"
-    },
+    }, 
     "name": "side"
 }

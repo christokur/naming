@@ -1,5 +1,6 @@
 {
-    "default": 0,
-    "classname": "NumberToken",
-    "name": "itemNumber"
+    "padding": 3, 
+    "default": "000", 
+    "name": "itemNumber", 
+    "classname": "NumberToken"
 }
