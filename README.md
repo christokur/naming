@@ -1,11 +1,13 @@
 Naming
 ======
-`namig` is a pure python naming convention manager.
+`naming` is a pure python naming convention manager.
 
 Dependencies
 ------------
 - [nose](https://nose.readthedocs.org/en/latest/)
 - [PyQtForSoftimage](https://github.com/caron/PyQtForSoftimage)
+- [wishlib](https://github.com/csaez/wishlib)
+- [python_qt_binding](https://github.com/ros-visualization/python_qt_binding)
 
 Installation
 ------------
