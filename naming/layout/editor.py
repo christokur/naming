@@ -15,10 +15,9 @@
 
 import os
 import sys
-
-from PyQt4 import QtGui, uic
+    
 from .. import Manager
-
+from python_qt_binding import QtGui,loadUi
 
 class Editor(QtGui.QMainWindow):
     TOKEN_CLASSES = ("StringToken", "NumberToken", "DictToken")
@@ -30,10 +29,31 @@ class Editor(QtGui.QMainWindow):
 
     def initUI(self):
         ui_dir = os.path.join(os.path.dirname(__file__), "ui")
-        self.ui = uic.loadUi(os.path.join(ui_dir, "namingEditor.ui"), self)
+        self.ui = loadUi(os.path.join(ui_dir, "namingEditor.ui"), self)
+
+        self.connections()
+
         self.save = True
         # update gui
         self.list_clicked()
+    
+    def connections(self):
+        self.rules_radioButton.clicked.connect(self.list_clicked)
+        self.tokens_radioButton.clicked.connect(self.list_clicked)
+        self.items_listWidget.currentRowChanged.connect(self.list_changed)
+        self.filter_lineEdit.textChanged.connect(self.filter_changed)
+        self.add_button.clicked.connect(self.add_clicked)
+        self.remove_button.clicked.connect(self.remove_clicked)
+        self.expr_lineEdit.editingFinished.connect(self.rule_updated)
+        self.padding_spinBox.editingFinished.connect(self.token_updated)
+        self.default_groupBox.toggled.connect(self.token_updated)
+        self.default_lineEdit.editingFinished.connect(self.token_updated)
+        self.default_spinBox.editingFinished.connect(self.token_updated)
+        self.default_comboBox.currentIndexChanged.connect(self.token_updated)
+        self.addValues_button.clicked.connect(self.addValue_clicked)
+        self.removeValues_button.clicked.connect(self.removeValue_clicked)
+        self.values_tableWidget.cellChanged.connect(self.values_changed)
+        self.expr_button.clicked.connect(self.expr_clicked)
 
     def list_clicked(self):
         vis = self.ui.rules_radioButton.isChecked()
