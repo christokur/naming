@@ -1,5 +1,5 @@
 # This file is part of naming
-# Copyright (C) 2014  Cesar Saez
+# Copyright (C) 2014 Cesar Saez
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -15,11 +15,12 @@
 
 import os
 import sys
-    
-from .. import Manager
-from python_qt_binding import QtGui,loadUi
 
-class Editor(QtGui.QMainWindow):
+from .. import Manager
+from wishlib.qt import QtGui, loadUi, widgets
+
+
+class Editor(widgets.QMainWindow):
     TOKEN_CLASSES = ("StringToken", "NumberToken", "DictToken")
 
     def __init__(self, parent=None):
@@ -30,13 +31,10 @@ class Editor(QtGui.QMainWindow):
     def initUI(self):
         ui_dir = os.path.join(os.path.dirname(__file__), "ui")
         self.ui = loadUi(os.path.join(ui_dir, "namingEditor.ui"), self)
-
         self.connections()
-
         self.save = True
-        # update gui
-        self.list_clicked()
-    
+        self.list_clicked()  # update gui
+
     def connections(self):
         self.rules_radioButton.clicked.connect(self.list_clicked)
         self.tokens_radioButton.clicked.connect(self.list_clicked)

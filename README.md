@@ -4,10 +4,8 @@ Naming
 
 Dependencies
 ------------
-- [nose](https://nose.readthedocs.org/en/latest/)
-- [PyQtForSoftimage](https://github.com/caron/PyQtForSoftimage)
-- [wishlib](https://github.com/csaez/wishlib)
-- [python_qt_binding](https://github.com/ros-visualization/python_qt_binding)
+- [nose](http://nose.readthedocs.org/en/latest) (unit testing)
+- [wishlib](http://github.com/csaez/wishlib)
 
 Installation
 ------------
