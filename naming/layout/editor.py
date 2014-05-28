@@ -17,10 +17,10 @@ import os
 import sys
 
 from .. import Manager
-from wishlib.qt import QtGui, loadUi, widgets
+from wishlib.qt import QtGui, loadUi, set_style
 
 
-class Editor(widgets.QMainWindow):
+class Editor(QtGui.QMainWindow):
     TOKEN_CLASSES = ("StringToken", "NumberToken", "DictToken")
 
     def __init__(self, parent=None):
@@ -263,5 +263,7 @@ class Editor(widgets.QMainWindow):
 
 def main():
     app = QtGui.QApplication(sys.argv)
-    Editor().show()
+    win = Editor()
+    set_style(win, True)
+    win.show()
     sys.exit(app.exec_())
