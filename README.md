@@ -1,18 +1,36 @@
 Naming
 ======
-`naming` is a pure python naming convention manager.
+`naming` is a generic naming convention library.
 
-Dependencies
-------------
-- [nose](http://nose.readthedocs.org/en/latest) (unit testing)
-- [wishlib](http://github.com/csaez/wishlib)
+```python
+import naming as n
 
-Installation
-------------
-Clone the repo and type in a terminal:
+# setup a new profile
+p = n.new_profile("test")
 
-    python setup.py install
+n.new_token("l", "L")
+n.new_token("r", "R")
+n.new_token("m", "M")
+n.new_token("g": "GEO")
+n.new_token("a": "ANIM")
 
-Ussage
-------
-Refer to the [documentation](#).
+f = p.add_field("side")
+f.append_token("l")
+f.append_token("r")
+f.append_token("m")
+f.set_default("m")
+
+p.add_field("name")
+
+f = p.add_field("type")
+f.append_token("g")
+f.append_token("a")
+f.set_default("g")
+
+# use naming to solve your names
+print(n.solve("test"))
+# M_test_GEO
+
+print(n.solve("test", "a"))
+# M_test_ANIM
+```
