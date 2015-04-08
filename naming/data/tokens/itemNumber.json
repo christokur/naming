@@ -1,6 +1,0 @@
-{
-    "padding": 3, 
-    "default": "000", 
-    "name": "itemNumber", 
-    "classname": "NumberToken"
-}

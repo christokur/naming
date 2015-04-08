@@ -1,7 +1,0 @@
-2014-01-28 14:09:19     2215 +2215    -0 57b5c24 cesarte@gmail.com 	riglab -> standalone
-2014-01-30 03:42:58     2374 +1133  -974 62a4e5a cesarte@gmail.com 	cleanup + license
-2014-02-08 19:50:13     2367   +35   -42 da9713e cesarte@gmail.com 	rule/token data updated
-2014-02-14 00:59:55     2367    +2    -2 a0654dc tokejepsen@gmail.com 	Python 2.6 sting formatting compatibility
-2014-02-14 01:01:11     2132   +29  -264 e62a47e tokejepsen@gmail.com 	PySide support
-2014-02-14 15:32:54     2132    +0    -0 9df31b1 cesarte@gmail.com 	Merge pull request #2 from tokejepsen/master
-2014-02-15 15:08:05     2128   +11   -15 9fc7b41 cesarte@gmail.com 	qt binding handled by wishlib.qt
