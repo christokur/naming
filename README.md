@@ -34,3 +34,15 @@ print(n.solve("test"))
 print(n.solve("test", "a"))
 # M_test_ANIM
 ```
+
+## Notes
+
+###  Good
+- setup.py
+- tests
+
+### Bad
+- unittest
+- pyproject
+- No GHA
+- 
