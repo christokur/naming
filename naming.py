@@ -14,10 +14,17 @@ class Profile(object):
         self.fields.append(f)
         return f
 
+    def get_field(self, name):
+        for f in self.fields:
+            if f.name == name:
+                return f
+        return None
+
     def list_fields(self):
         return [f.name for f in self.fields]
 
     def solve(self, *arg, **kwds):
+        arg = list(arg)
         non_default = list()
         for f in self.fields:
             if f.has_default:
@@ -31,9 +38,9 @@ class Profile(object):
                 if a in f.tokens:
                     f.solve(a)
                     arg.remove(a)
-        for k, v in kwds.iteritems():
-            f = self.get_field(k)
-            f.solve(v)
+        for k, v in kwds.items():
+            if f := self.get_field(k):
+                f.solve(v)
         i = 0
         for f in self.fields:
             if not f.value:
